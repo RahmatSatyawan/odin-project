@@ -3,10 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Odin Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Cek Console Browser F12</h1>
-    <script src="./main.js"></script>
+    <div class="container">
+      <h1>Odin Rock Paper Scissors</h1>
+      <!-- <h2>Cek Console Browser F12</h2> -->
+      <div class="scoreboard">
+        <div>
+          <span id="user-label" class="badge">User</span>
+          <span id="user-score">0</span>
+        </div>
+        <div>
+          <span id="computer-label" class="badge">Computer</span>
+          <span id="computer-score">0</span>
+        </div>
+      </div>
+
+      <div class="result">
+        <p id="result">Result</p>
+        <p id="user-choice"></p>
+        <p id="computer-choice"></p>
+      </div>
+
+      <div class="choices">
+        <p id="action-message">Make your move. Click the button</p>
+        <div class="choice" id="r">
+          <button id="rock">
+            <img src="./img/rock.png" alt="rock" />
+            Rock
+          </button>
+        </div>
+        <div class="choice" id="p">
+          <button id="paper">
+            <img src="./img/paper.png" alt="paper" />
+            Paper
+          </button>
+        </div>
+        <div class="choice" id="s">
+          <button id="scissors">
+            <img src="./img/scissors.png" alt="scissors" />
+            Scissors
+          </button>
+        </div>
+      </div>
+
+      <div class="reset">
+        <button id="reset">Reset</button>
+      </div>
+     
+
+    </div>
+
+
+    <script src="./app.js"></script>
+    <!-- <script src="./main.js"></script> -->
   </body>
 </html>
