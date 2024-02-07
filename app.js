@@ -4,6 +4,8 @@ let round = 1;
 
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
+const userChoice_show = document.getElementById("user-choice");
+const computerChoice_show = document.getElementById("computer-choice");
 
 const userChoice_Rock = document.getElementById("rock");
 const userChoice_Paper = document.getElementById("paper");
@@ -28,6 +30,9 @@ function playRound(userChoice, computerChoice) {
 
   userChoice = userChoice.toLowerCase();
   computerChoice = computerChoice.toLowerCase();
+  userChoice_show.innerHTML = "User Choice : " + userChoice;
+  computerChoice_show.innerHTML = "Computer Choice : " + computerChoice;
+
   console.log(`Player: ${userChoice} vs Computer: ${computerChoice}`);
 
   if (userChoice === computerChoice) {
@@ -85,6 +90,8 @@ function main() {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result.innerHTML = "";
+    userChoice_show.innerHTML = "";
+    computerChoice_show.innerHTML = "";
     userChoice_Rock.disabled = false;
     userChoice_Paper.disabled = false;
     userChoice_Scissors.disabled = false;
@@ -92,5 +99,3 @@ function main() {
 }
 
 main();
-
-// getUserChoice();
